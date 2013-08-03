@@ -1,6 +1,6 @@
 {application, msw,
  [
-  {description, ""},
+  {description, "Minecraft Server Wrapper"},
   {vsn, "1"},
   {registered, []},
   {applications, [
