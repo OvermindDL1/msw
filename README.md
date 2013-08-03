@@ -1,0 +1,4 @@
+MSW
+===
+
+Minecraft Server Wrapper
