@@ -25,6 +25,7 @@ start_link() ->
 %% ===================================================================
 
 init([]) ->
+	lager:warning("loadinating!"),
 	{ok, { {one_for_one, 5, 10}, [
 			%% Name, NbAcceptors, TransOpts, ProtoOpts
 		{webserver, {cowboy, start_http, [webserver, 100, [{port, 8000}], [{env, [{dispatch, dispatch_rules()}]}]]}, permanent, 5000, supervisor, [cowboy]}
