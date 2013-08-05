@@ -25,10 +25,11 @@ start_link() ->
 %% ===================================================================
 
 init([]) ->
-	lager:warning("loadinating!"),
+	{ok, Port} = application:get_env(port),
+	{ok, Workers} = application:get_env(workers),
 	{ok, { {one_for_one, 5, 10}, [
 			%% Name, NbAcceptors, TransOpts, ProtoOpts
-		{webserver, {cowboy, start_http, [webserver, 100, [{port, 8000}], [{env, [{dispatch, dispatch_rules()}]}]]}, permanent, 5000, supervisor, [cowboy]}
+		{webserver, {cowboy, start_http, [webserver, Workers, [{port, Port}], [{env, [{dispatch, dispatch_rules()}]}]]}, permanent, 5000, supervisor, [cowboy]}
 		]} }.
 
 
@@ -37,9 +38,14 @@ dispatch_rules() ->
 	cowboy_router:compile(
 	%% {URIHost, [{URIPath, Handler, Opts}]}
 		[{'_', [
+			{["/static/n2o/[...]"], cowboy_static,
+				[{directory, iolist_to_binary([code:lib_dir(n2o_scripts), <<"/n2o">>])}]},
 			{["/static/[...]"], cowboy_static,
 				[{directory, {priv_dir, ?APP, [<<"static">>]}},
 					{mimetypes, {fun mimetypes:path_to_mimes/2, default}}]},
+			{"/rest/:bucket", n2o_rest, []},
+			{"/rest/:bucket/:key", n2o_rest, []},
+			{"/rest/:bucket/:key/[...]", n2o_rest, []},
 			{["/ws/[...]"], n2o_websocket, []},
 			{'_', n2o_cowboy, []}
 			]}]).
