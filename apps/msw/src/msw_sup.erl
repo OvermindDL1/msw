@@ -30,6 +30,7 @@ init([]) ->
 	{ok, { {one_for_one, 5, 10}, [
 			%% Name, NbAcceptors, TransOpts, ProtoOpts
 		{webserver, {cowboy, start_http, [webserver, Workers, [{port, Port}], [{env, [{dispatch, dispatch_rules()}]}]]}, permanent, 5000, supervisor, [cowboy]}
+		%{mc_server_sup, {}, permanent, 5000, supervisor, []}
 		]} }.
 
 
@@ -40,6 +41,8 @@ dispatch_rules() ->
 		[{'_', [
 			{["/static/n2o/[...]"], cowboy_static,
 				[{directory, iolist_to_binary([code:lib_dir(n2o_scripts), <<"/n2o">>])}]},
+			%{["/static/bootstrap/[...]"], cowboy_static,
+			%	[{directory, iolist_to_binary([code:lib_dir(n2o_scripts), <<"/bootstrap">>])}]},
 			{["/static/[...]"], cowboy_static,
 				[{directory, {priv_dir, ?APP, [<<"static">>]}},
 					{mimetypes, {fun mimetypes:path_to_mimes/2, default}}]},

@@ -9,7 +9,7 @@
 	stop/1
 	]).
 
--define(APPS, [sasl, lager, sync, exec, crypto, ranch, cowboy, asn1, public_key, ssl, n2o, bcrypt, erlpass, eleveldb, erlcron, gproc, msw]).
+-define(APPS, [sasl, lager, sync, exec, crypto, ranch, cowboy, asn1, public_key, ssl, n2o, bcrypt, eleveldb, erlcron, gproc, msw]).
 
 %% ===================================================================
 %% Application callbacks
