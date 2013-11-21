@@ -1,10 +1,15 @@
 .eunit
 deps
-ebin
-rel/msw
+/ebin
 *.o
 *.beam
 *.plt
 erl_crash.dump
 log/*
 *~
+users
+/include/plugins.hrl
+/priv/static/nitrogen
+/priv/static/doc
+/priv/static/plugins
+/priv/plugins

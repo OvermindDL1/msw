@@ -1,0 +1,9 @@
+{application, msw, [
+	{description, "Minecraft Server Wrapper"},
+	{vsn, "0.0.1"},
+	{applications,[kernel,stdlib]},
+	{registered,[]},
+	{mod,{msw_app,[]}},
+	{env,[]},
+	{modules,[]}
+]}.
