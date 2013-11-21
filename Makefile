@@ -18,6 +18,7 @@ quick-run:
 run: all quick-run
 
 compile:
+	mkdir -p ebin
 	rebar compile
 
 deps:
