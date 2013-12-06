@@ -7,7 +7,24 @@
 	stop/1
 	]).
 
--define(APPS, [nprocreg, sync, crypto, ranch, cowboy, bcrypt, ssh, msw]).
+-define(APPS, 
+	[compiler
+	,syntax_tools
+	,goldrush
+	,lager
+	,sasl
+	,gproc
+	,nprocreg
+	,sync
+	,crypto
+	,ranch
+	,cowboy
+	,bcrypt
+	,asn1
+	,public_key
+	,ssh
+	,msw
+	]).
 
 %% ===================================================================
 %% Application callbacks
@@ -15,7 +32,7 @@
 
 %% to start manually from console with start.sh
 start() ->
-	[begin application:start(A), io:format("~p~n", [A]) end || A <- ?APPS].
+	[io:format("Starting: ~p -> ~p~n", [A, application:start(A)]) || A <- ?APPS].
 
 start(_StartType, _StartArgs) ->
 	msw_sup:start_link().

@@ -11,6 +11,7 @@ first-run: all
 	mkdir -p users/root/.ssh
 	@([ -e users/root/.ssh/id_rsa ] || echo && echo "Creating SSH server private/public keys"&&echo)
 	@([ -e users/root/.ssh/id_rsa ] || ssh-keygen -t rsa -N "" -f users/root/.ssh/id_rsa)
+	@([ -e users/root/.ssh/ssh_host_rsa_key ] || ssh-keygen -t rsa -N "" -f users/root/.ssh/ssh_host_rsa_key)
 
 quick-run:
 	erl -pa ${PWD}/ebin -pa ${PWD}/deps/*/ebin -name msw_testing"@"`hostname` -s msw_app start -config ebin/msw

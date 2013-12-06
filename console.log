@@ -1,0 +1,15 @@
+2013-12-04 03:34:51.906 [info] <0.7.0> Application lager started on node 'msw_testing@minecraftforge.net'
+2013-12-04 03:34:59.640 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/glc.erl:0: Recompiled.
+2013-12-04 03:34:59.724 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/glc_code.erl:0: Recompiled.
+2013-12-04 03:34:59.773 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/glc_lib.erl:0: Recompiled.
+2013-12-04 03:34:59.788 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/glc_ops.erl:0: Recompiled.
+2013-12-04 03:34:59.791 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/gr_app.erl:0: Recompiled.
+2013-12-04 03:34:59.804 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/gr_context.erl:0: Recompiled.
+2013-12-04 03:34:59.839 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/gr_counter.erl:0: Recompiled.
+2013-12-04 03:34:59.844 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/gr_counter_sup.erl:0: Recompiled.
+2013-12-04 03:34:59.858 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/gr_manager.erl:0: Recompiled.
+2013-12-04 03:34:59.863 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/gr_manager_sup.erl:0: Recompiled.
+2013-12-04 03:34:59.899 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/gr_param.erl:0: Recompiled.
+2013-12-04 03:34:59.904 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/gr_param_sup.erl:0: Recompiled.
+2013-12-04 03:34:59.909 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/gr_sup.erl:0: Recompiled.
+2013-12-04 03:34:59.922 [info] <0.69.0> /home/overminddl1/erlang/msw_test/msw/deps/goldrush/src/gre.erl:0: Recompiled.

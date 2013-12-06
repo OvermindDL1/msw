@@ -53,7 +53,7 @@ init([]) ->
 	]),
 
 	{ok, { {one_for_one, 5, 300}, [
-		?CHILD(msw_mcservers_sup, superviser),
+		%?CHILD(msw_mcservers_sup, superviser),
 		?CHILD(msw_ssh_server, worker)
 		]} }.
 
